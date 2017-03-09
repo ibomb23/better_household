@@ -1,0 +1,15 @@
+import random
+
+our_meals = {"1" : "Nudeln mit Pesto", "2" : "Lasagne", "3" : "Rouladen", "4" : "Nudeln Bolognese", "5" : "Bratkartoffeln"}
+
+saturday = random.randrange(1,len(our_meals),1)
+sunday = random.randrange(1,len(our_meals),1)
+not_the_same = False
+
+while not_the_same == False:  
+  if saturday == sunday:    
+    sunday = random.randrange(1,len(our_meals),1)  
+  else:    not_the_same = True    
+  
+print ("Our meal on saturday is %s " % our_meals[str(saturday)])
+print ("Our meal on sunday is %s" % our_meals[str(sunday)])
