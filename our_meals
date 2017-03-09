@@ -1,6 +1,22 @@
 import random
 
-our_meals = {"1" : "Nudeln mit Pesto", "2" : "Lasagne", "3" : "Rouladen", "4" : "Nudeln Bolognese", "5" : "Bratkartoffeln"}
+our_meals = {
+             "1" : "Nudeln mit Pesto", 
+             "2" : "Lasagne", 
+             "3" : "Rouladen", 
+             "4" : "Nudeln Bolognese", 
+             "5" : "Bratkartoffeln"
+             "6" : "Tomatensuppe alla caprese"
+             "7" : "Krafteintopf"
+             "8" : "Fisch-Minestrone"
+             }
+
+recepts = {
+          "6" : "http://www.essen-und-trinken.de/rezept/317043/tomatensuppe-alla-caprese.html"
+          "7" : "http://www.essen-und-trinken.de/rezept/304215/krafteintopf.html"
+          "8" : "http://www.essen-und-trinken.de/rezept/307495/fisch-minestrone.html"
+    
+          }
 
 saturday = random.randrange(1,len(our_meals),1)
 sunday = random.randrange(1,len(our_meals),1)
