@@ -9,13 +9,77 @@ our_meals = {
              "6" : "Tomatensuppe alla caprese"
              "7" : "Krafteintopf"
              "8" : "Fisch-Minestrone"
-             }
+             "9" : "Blitz-Chili-con-Carne"
+             "10" : "Kürbissuppe"
+             "11" : "Kartoffelsuppe mit Lorbeer"
+             "12" : "Hähnchen-Pilz-Geschnetzeltes"
+             "13" : "Reis-Lauch-Puffer"
+             "14" : "Möhren-Pasta"
+             "15" : "Seelachs mit Kräuterbröseln"
+             "16" : "Ofen-Schafskäse"
+             "17" : "Frische Tomaten-Pasta"
+             "18" : "Bulgur-Salat"
+             "19" : "Nudelauflauf mit Kruste"
+             "20" : "Pellkartoffeln mit Quark"
+             "21" : "Mais-Fritters"
+             "22" : "Gemüse aus dem Bratschlauch"
+             "23" : "Tomaten-Chili-Nudeln"
+             "24" : "Senfeier"
+             "25" : "Kartoffelpuffer"
+             "26" : "Tim Mälzers Kartoffeltaler"
+#             "27" : ""
+#             "28" : ""
+#             "29" : ""
+#             "30" : ""
+#             "31" : ""
+#             "32" : ""
+#             "33" : ""
+#             "34" : ""
+#            "35" : ""
+#             "36" : ""
+#            "37" : ""
+#             "38" : ""
+#             "39" : ""       
+#             "40" : ""
+              }
 
 recepts = {
           "6" : "http://www.essen-und-trinken.de/rezept/317043/tomatensuppe-alla-caprese.html"
           "7" : "http://www.essen-und-trinken.de/rezept/304215/krafteintopf.html"
           "8" : "http://www.essen-und-trinken.de/rezept/307495/fisch-minestrone.html"
-    
+          "9" : "http://www.essen-und-trinken.de/rezept/272602/blitz-chili-con-carne.html"
+          "10" : "http://www.essen-und-trinken.de/rezept/283131/kuerbissuppe.html"
+          "11" : "http://www.essen-und-trinken.de/rezept/276283/kartoffelsuppe-mit-lorbeer.html"
+          "12" : "http://www.essen-und-trinken.de/rezept/279546/haehnchen-pilz-geschnetzeltes.html" 
+          "13" : "http://www.essen-und-trinken.de/rezept/319683/reis-lauch-puffer.html"
+          "14" : "http://www.essen-und-trinken.de/rezept/319773/moehren-pasta.html"
+          "15" : "http://www.essen-und-trinken.de/rezept/313429/seelachs-mit-kraeuterbroeseln.html"
+          "16" : "http://www.essen-und-trinken.de/rezept/319648/ofen-schafskaese.html"
+          "17" : "http://www.essen-und-trinken.de/preiswert-kochen/preiswerte-und-schnelle-hauptgerichte-1012023.htm
+          l#r313223-frische-tomaten-pasta"
+          "18" : "http://www.essen-und-trinken.de/rezept/177374/bulgur-salat.html"
+          "19" : "http://www.essen-und-trinken.de/rezept/300033/nudelauflauf-mit-kruste.html"
+          "20" : "http://www.essen-und-trinken.de/rezept/127372/pellkartoffeln-mit-quark.html"
+          "21" : "http://www.essen-und-trinken.de/rezept/231808/mais-fritters.html"
+          "22" : "http://www.essen-und-trinken.de/rezept/274054/gemuese-aus-dem-bratschlauch.html"
+          "23" : "http://www.essen-und-trinken.de/rezept/272543/tomaten-chili-nudeln.html"
+          "24" : "http://www.essen-und-trinken.de/rezept/253673/senfeier.html"
+          "25" : "http://www.essen-und-trinken.de/preiswert-kochen/preiswerte-und-vegetarische-gerichte-1036352.html#r140290-kartoffelpuffer"
+          "26" : "http://www.essen-und-trinken.de/rezept/100556/tim-maelzers-kartoffeltaler.html"
+#          "27" : ""
+#          "28" : ""
+#          "29" : ""
+#          "30" : ""
+#          "31" : ""
+#          "32" : ""
+#          "33" : ""
+#          "34" : ""
+#         "35" : ""
+#          "36" : ""
+#          "37" : ""
+#          "38" : ""
+#          "39" : ""
+#          "40" : ""
           }
 
 saturday = random.randrange(1,len(our_meals),1)
@@ -23,9 +87,13 @@ sunday = random.randrange(1,len(our_meals),1)
 not_the_same = False
 
 while not_the_same == False:  
-  if saturday == sunday:    
+    if saturday == sunday:    
     sunday = random.randrange(1,len(our_meals),1)  
   else:    not_the_same = True    
   
 print ("Our meal on saturday is %s " % our_meals[str(saturday)])
+if saturday > 5:
+  print ("You find the recept on:\n%s" % recepts[str(saturday)])
 print ("Our meal on sunday is %s" % our_meals[str(sunday)])
+if sunday > 5:  
+  print ("You find the recept on:\n%s" % recepts[str(sunday)])
